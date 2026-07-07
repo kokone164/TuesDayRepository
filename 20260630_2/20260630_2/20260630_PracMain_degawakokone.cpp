@@ -1,47 +1,14 @@
 #include<iostream>
-#include<cstdlib>
-#include<ctime>
 #include"20260630_Header_degawakokone.h"
 
 using namespace std;
 
 int main(void)
 {
-	srand((unsigned int)time(NULL));
-
-	int plyCard = 0;
-	int cpuCard = 0;
-
-	int randCard = 0;
-
-
-	randCard = rand() % CARD + 1;
-
-	cout << "BLACK JACK\nãƒ’ãƒƒãƒˆ:0ã€€ã‚¹ã‚¿ãƒ³ãƒ‰:1\n"
+	cout << "BLACK JACK\nƒqƒbƒg:0@ƒXƒ^ƒ“ƒh:1\n"
 		"====================GAME START====================\n";
 
-	//ã‚«ãƒ¼ãƒ‰ã‚’é…ã‚‹
-	for (int i = 0;i < 2;i++)
-	{
-		AddCard(plyCard);
-	}
-	cout <<"PLAYER:" << plyCard << endl;
-
-	for (int i = 0;i < 2;i++)
-	{
-		AddCard(cpuCard);
-	}
-	cout <<"CPU:" << cpuCard << endl;
-
-	if (plyCard >= BLACKJACK||cpuCard>=BLACKJACK)
-	{
-		Burst(plyCard, cpuCard);
-		return 0;
-	}
-	
-	cout << "====================PLAYER TURN====================\n";
-
-
+	Game();
 
 	return 0;
 }
