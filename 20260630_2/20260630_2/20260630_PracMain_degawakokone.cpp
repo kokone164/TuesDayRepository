@@ -20,16 +20,28 @@ int main(void)
 	cout << "BLACK JACK\nヒット:0　スタンド:1\n"
 		"====================GAME START====================\n";
 
-	while (true)
+	//カードを配る
+	for (int i = 0;i < 2;i++)
 	{
-		for (int i = 0;i < 2;i++)
-		{
-			randCard = rand() % CARD + 1;
-			plyCard += randCard;
-		}
+		AddCard(plyCard);
 	}
+	cout <<"PLAYER:" << plyCard << endl;
 
-	cout << plyCard << endl;
+	for (int i = 0;i < 2;i++)
+	{
+		AddCard(cpuCard);
+	}
+	cout <<"CPU:" << cpuCard << endl;
+
+	if (plyCard >= BLACKJACK||cpuCard>=BLACKJACK)
+	{
+		Burst(plyCard, cpuCard);
+		return 0;
+	}
+	
+	cout << "====================PLAYER TURN====================\n";
+
+
 
 	return 0;
 }
