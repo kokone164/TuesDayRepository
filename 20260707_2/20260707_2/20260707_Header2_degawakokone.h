@@ -2,6 +2,7 @@
 
 //定数
 const int INDEX = 3;
+const int CARD = 10;
 const int MIN = 0;
 const int MAX = 9;
 
@@ -9,7 +10,7 @@ const int MAX = 9;
 void Game();
 
 /// <summary>
-/// カード分配
+/// 数字分配
 /// </summary>
 /// <param name="plyNum">プレイヤーの数字</param>
 /// <param name="cpuNum">CPUの数字</param>

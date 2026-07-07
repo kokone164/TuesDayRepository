@@ -4,12 +4,21 @@
 #include"20260707_Header2_degawakokone.h"
 using namespace std;
 
-void Rand(int plyNum[], int cpuNum[],int index)
+void Rand(int plyNum[], int cpuNum[],int card)
 {
-	for (int i = 0;i < index;i++)
+	int num;
+	for (int i = 0;i < card;i++)
 	{
-		plyNum[i] = rand() % 10;
-		cpuNum[i] = rand() % 10;
+		plyNum[i] = i;
+		cpuNum[i] = i;
+	}
+	for (int i = 0;i < card;i++)
+	{
+		plyNum[i];
+	}
+	for (int i = 0;i < card;i++)
+	{
+
 	}
 }
 
@@ -53,7 +62,11 @@ void Game()
 	{
 		cout << plyNum[i] << ",";
 	}
-
+	cout << "\nCPU:";
+	for (int i = 0;i < INDEX;i++)
+	{
+		cout << cpuNum[i] << ",";
+	}
 	while (true)
 	{
 		count++;
