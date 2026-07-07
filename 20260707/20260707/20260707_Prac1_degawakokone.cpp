@@ -6,18 +6,15 @@ void AddAry(int number[], int index, int num2);
 
 int main(void)
 {
-	int i;
+	int i = 0;
 
 	int number[10] = {};
 
 	int num = 0;
 
 	cout << "”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << endl;
-	for (i = 0;i < 10;i++)
-	{
-		cin >> num;
-		AddAry(number, i, num);
-	}
+	AddAry(number,i,num);
+
 
 	cout << "‹ô”:";
 	for (i = 0;i < 10;i++)
@@ -42,5 +39,9 @@ int main(void)
 
 void AddAry(int number[], int index,int num2)
 {
-	number[index] = num2;
+	for (index = 0;index < 10;index++)
+	{
+		cin >> num2;
+		number[index] = num2;
+	}
 }
