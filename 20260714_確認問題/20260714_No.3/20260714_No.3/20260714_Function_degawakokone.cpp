@@ -52,12 +52,12 @@ void Game()
 
 		//プレイヤー入力
 		cout << "\nプレイヤーは数字を選んで番号を入力してください" << endl;
-		InputCheck(plyNum, 10, player);
+		InputCheck(plyCheck, 10, player);
 
 		while (true)
 		{
 			cpu = rand() % 10;
-			if (cpuCheck[cpu] == true)
+			if (cpuCheck[cpu - 1] == true)
 			{
 				break;
 			}
@@ -67,16 +67,16 @@ void Game()
 		cpuCheck[cpu - 1] = false;
 
 		//数字を表示
-		cout << "\nPLAYER:" << plyNum[player] << " CPU:" << cpuNum[cpu] << endl;
+		cout << "\nPLAYER:" << plyNum[player - 1] << " CPU:" << cpuNum[cpu - 1] << endl;
 
 		//判定
-		if (plyNum[player] == cpuNum[cpu])
+		if (plyNum[player - 1] == cpuNum[cpu - 1])
 		{
 			cout << "DROW\n";
 			plyP++;
 			cpuP++;
 		}
-		else if (plyNum[player] > cpuNum[cpu])
+		else if (plyNum[player - 1] > cpuNum[cpu - 1])
 		{
 			cout << "プレイヤーに得点\n";
 			plyP += POINT;
@@ -105,7 +105,7 @@ void Game()
 	}
 }
 
-void InputCheck(int plyCheck[],int num,int &player)
+void InputCheck(bool plyCheck[],int num,int &player)
 {
 	while (true)
 	{
@@ -116,7 +116,7 @@ void InputCheck(int plyCheck[],int num,int &player)
 		}
 		else
 		{
-			if (plyCheck[player] == false)
+			if (plyCheck[player - 1] == false)
 			{
 				cout << "その数字は既に使用されています。入力しなおしてください。" << endl;
 			}
