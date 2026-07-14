@@ -7,18 +7,29 @@ using namespace std;
 void Rand(int plyNum[], int cpuNum[],int card)
 {
 	int num;
-	for (int i = 0;i < card;i++)
+	//数字を配る
+	for (int i = 0;i < CARD;i++)
 	{
 		plyNum[i] = i;
 		cpuNum[i] = i;
 	}
-	for (int i = 0;i < card;i++)
+	//プレイヤーのカードをシャッフル
+	for (int i = 0;i < CARD;i++)
 	{
-		plyNum[i];
-	}
-	for (int i = 0;i < card;i++)
-	{
+		num = rand() % CARD;
 
+		int temp = plyNum[i];
+		plyNum[i] = plyNum[num];
+		plyNum[num] = temp;
+	}
+	//CPUのカードをシャッフル
+	for (int i = 0;i < CARD;i++)
+	{
+		num = rand() % CARD;
+
+		int temp = cpuNum[i];
+		cpuNum[i] = cpuNum[num];
+		cpuNum[num] = temp;
 	}
 }
 
@@ -48,9 +59,9 @@ void Game()
 
 	//変数
 
-	int plyNum[INDEX] = {};
+	int plyNum[CARD] = {};
 	int entNum[INDEX] = {};
-	int cpuNum[INDEX] = {};
+	int cpuNum[CARD] = {};
 
 	int hit = 0;
 	int count = 0;
@@ -62,11 +73,7 @@ void Game()
 	{
 		cout << plyNum[i] << ",";
 	}
-	cout << "\nCPU:";
-	for (int i = 0;i < INDEX;i++)
-	{
-		cout << cpuNum[i] << ",";
-	}
+	
 	while (true)
 	{
 		count++;
