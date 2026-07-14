@@ -14,8 +14,8 @@ void Game();
 /// </summary>
 /// <param name="plyNum">プレイヤーの数字</param>
 /// <param name="cpuNum">CPUの数字</param>
-/// <param name="index">INDEX</param>
-void Rand(int plyNum[], int cpuNum[], int index);
+/// <param name="card">カード枚数</param>
+void Rand(int plyNum[], int cpuNum[], int card);
 
 /// <summary>
 ///入力チェック

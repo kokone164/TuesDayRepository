@@ -67,7 +67,7 @@ void Game()
 	int count = 0;
 
 	//”šU‚è•ª‚¯
-	Rand(plyNum, cpuNum, INDEX);
+	Rand(plyNum, cpuNum, CARD);
 	cout << "PLAYER:";
 	for (int i = 0;i < INDEX;i++)
 	{
