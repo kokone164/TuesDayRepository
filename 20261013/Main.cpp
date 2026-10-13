@@ -2,6 +2,7 @@
 #include"Player.h"
 #include"Enemy.h"
 #include"Boss.h"
+#include"Wizard.h"
 #include"ButtleManager.h"
 int main(void)
 {
@@ -9,12 +10,14 @@ int main(void)
 	Player player("勇者ヨシヒコ");
 	Enemy enemy("スライム");
 	Boss boss("魔王");
+	Wizard wizard("ムラサキ");
 
 	ButtleManager manager;
 
 	manager.StartBattle(&player);
 	manager.StartBattle(&enemy);
 	manager.StartBattle(&boss);
+	manager.StartBattle(&wizard);
 
 	//Character* character;	//characterというポインターに別のものを入れるとそこの関数を使うことができる
 
