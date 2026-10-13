@@ -6,9 +6,9 @@
 int main(void)
 {
 	//コンストラクタ
-	Player player;
-	Enemy enemy;
-	Boss boss;
+	Player player("勇者ヨシヒコ");
+	Enemy enemy("スライム");
+	Boss boss("魔王");
 
 	ButtleManager manager;
 
