@@ -14,9 +14,17 @@ int main(void)
 
 	for (int i = 0; i < 3; i++)
 	{
-		randHp = rand() % 71 + 30;
+		randHp = rand() % 70 + 30;
 		enemies.push_back(Enemy(randHp));
 	}
+
+	for (const Enemy& enemy : enemies)
+	{
+		enemy.ShowHp();
+	}
+
+	enemies.erase(enemies.begin() + 0);		//ˆê”Ô–Ú‚Ì“G‚ªÁ‚¦‚é
+	cout << "ˆê‘Ìíœ‚µ‚Ü‚µ‚½" << endl;
 
 	for (const Enemy& enemy : enemies)
 	{
