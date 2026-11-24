@@ -1,0 +1,15 @@
+20261124_スマートポインタ
+
+①普通にオブジェクトを使いたい　→　オブジェクト生成(Playerを一体生成)
+	Enemy enemy;
+	enemy.Draw();
+
+②別のオブジェクトを操作したい・対象を切り替えたい(攻撃対象の敵を切り替えたい)
+	Enemy* target = &enemy;
+	target->Draw();
+
+③動的に生成したオブジェクトを一ヶ所で管理したい(敵が画面外から次々に出現する)
+	auto enemy = std::make_unique<Enemy>();
+
+④複数の場所で共同所有したい(GameManagerやUIManagerで同じ敵を共同所有したい)
+	auto enemy = std::make_shared<Enemy>();
